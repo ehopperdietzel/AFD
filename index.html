@@ -1,0 +1,55 @@
+<html>
+<head>
+  <title>AFD</title>
+  <meta charset="utf-8">
+
+  <!-- Estilos gráficos -->
+  <link type="text/css" rel="stylesheet" href="css/lib/vis.min.css"/>
+  <link type="text/css" rel="stylesheet" href="css/lib/vis-network.min.css"/>
+  <link type="text/css" rel="stylesheet" href="css/styles.css"/>
+
+  <!-- Librerías -->
+  <script type="text/javascript" src="js/lib/vis.min.js"></script>
+  <script type="text/javascript" src="js/lib/jquery.js"></script>
+
+</head>
+<body>
+
+  <!-- Canvas para mostrar el grafo -->
+  <div id="mynetwork"></div>
+
+  <!-- Input para el testeo -->
+  <div id="testingZone">
+    <textarea placeholder="Ingrese lista de palabras" id="wordList"></textarea>
+    <div class="btnCont"><img src="img/run.png" onclick="testAFD()"></img></div>
+    <div id="output">
+      <table>
+        <colgroup>
+            <col width="100%" />
+            <col width="0%" />
+        </colgroup>
+        <tr>
+          <th>Palabra</th><th>Salida</th>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+
+  <!-- Diálogo para modificar un nodo -->
+  <div id="nodeEditDialog">
+    <div class="container">
+      <input id="name" type="text" value="" placeholder="Nombre del estado"><br>
+      <input id="initial" type="checkbox" value="false"> Estado inicial<br>
+      <input id="final" type="checkbox" value="false"> Estado final<br>
+      <div class="buttons">
+        <button id="cancel">Cancelar</button>
+        <button id="save">Guardar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
