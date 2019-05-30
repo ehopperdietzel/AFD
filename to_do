@@ -1,0 +1,7 @@
+- Escribir informe final
+- Hacer que la flecha del estado inicial sea rígida, más pequeña y
+ siempre apunte hacia arriba-derecha.
+- Cambiar las strings que dicen "Nodo" por "estado" en la UI.
+- Cambiar "nombre de la trancisión" por "símbolo de la trancisión"
+- Corregir overflow del input field al editar nodo.(FF)
+- Limitar cada trancisión a solo un caracter.
