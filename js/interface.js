@@ -36,12 +36,12 @@ var locales =
     edit: 'Editar',
     del: 'Eliminar',
     back: 'Volver',
-    addNode: 'Añadir Nodo',
+    addNode: 'Añadir Estado',
     addEdge: 'Añadir Transición',
-    editNode: 'Editar Nodo',
+    editNode: 'Editar Estado',
     editEdge: 'Editar Transición',
-    addDescription: 'Haga click en un espacio vacío para añadir un nodo.',
-    edgeDescription: 'Haga click en un nodo y arrastre al destino.',
+    addDescription: 'Haga click en un espacio vacío para añadir un estado.',
+    edgeDescription: 'Haga click en un estado y arrastre al destino.',
     editEdgeDescription: 'Click on the control points and drag them to a node to connect to it.',
     createEdgeError: 'Cannot link edges to a cluster.',
     deleteClusterError: 'Clusters cannot be deleted.',
@@ -259,7 +259,7 @@ function createTransition(data, callback)
   {
     if(transitions._data[trans].from == data.from && transitions._data[trans].label == data.label)
     {
-      alert("El nodo ya contiene una transición con este nombre.\nElija otro nombre.");
+      alert("El estado ya contiene una transición con este nombre.\nElija otro nombre.");
       createTransition(data, callback);
       return;
     }
@@ -290,7 +290,7 @@ function editTransition(data, callback)
   {
     if(transitions._data[trans].from == data.from && transitions._data[trans].label == data.label)
     {
-      alert("El nodo ya contiene una transición con este nombre.\nElija otro nombre.");
+      alert("El estado ya contiene una transición con este nombre.\nElija otro nombre.");
       editTransition(data, callback);
       return;
     }
