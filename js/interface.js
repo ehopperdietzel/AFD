@@ -179,6 +179,7 @@ function editNode(data,callback)
       alert("El nombre del estado no puede ser vacío.");
       return;
     }
+
     // Verifica que el nuevo nombre no sea el mismo que el de otro nodo
     for(var node in nodes._data)
     {
@@ -245,11 +246,18 @@ function createTransition(data, callback)
   }
 
   // Asigna el nombre de la transición
-  data.label = prompt("Ingrese el nombre de la transición").trim();
+  data.label = prompt("Ingrese el símbolo de la transición").trim();
 
   // Verifica si se cancela o si el nombre es vacio
   if(data.label == null || data.label == "")
   {
+    alert("Debe ingresar un símbolo.");
+    callback(null);
+    return;
+  }
+  if(data.label.length > 1)
+  {
+    alert("Debe ingresar solo un símbolo.");
     callback(null);
     return;
   }
@@ -259,7 +267,7 @@ function createTransition(data, callback)
   {
     if(transitions._data[trans].from == data.from && transitions._data[trans].label == data.label)
     {
-      alert("El estado ya contiene una transición con este nombre.\nElija otro nombre.");
+      alert("El estado ya contiene una transición con este símbolo.\nElija otro.");
       createTransition(data, callback);
       return;
     }
@@ -276,11 +284,17 @@ function editTransition(data, callback)
 {
 
   // Asigna el nuevo nombre de la transición
-  data.label = prompt("Ingrese el nuevo nombre de la transición");
+  data.label = prompt("Ingrese el nuevo símbolo de la transición");
 
   // Verifica si se cancela o si el nombre es vacio
-  if(data.label == null || data.label == false || data.label == "")
+  if(data.label == null || data.label == "")
   {
+    callback(null);
+    return;
+  }
+  if(data.label.length > 1)
+  {
+    alert("Debe ingresar solo un símbolo.");
     callback(null);
     return;
   }
@@ -290,7 +304,7 @@ function editTransition(data, callback)
   {
     if(transitions._data[trans].from == data.from && transitions._data[trans].label == data.label)
     {
-      alert("El estado ya contiene una transición con este nombre.\nElija otro nombre.");
+      alert("El estado ya contiene una transición con este símbolo.\nElija otro.");
       editTransition(data, callback);
       return;
     }
