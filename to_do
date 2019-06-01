@@ -6,3 +6,4 @@
 - Corregir overflow del input field al editar nodo.(FF)
 - Limitar cada trancisión a solo un caracter.
 - Indentar con 4 espacios en lugar de 2 para que se vea bien.
+- Que solo haya un estado inicial
