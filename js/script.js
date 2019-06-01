@@ -35,7 +35,7 @@ function isCorrectAFD()
       return true;
   }
 
-  alert("Debe asignal al menos un estado final.");
+  alert("Debe asignar al menos un estado final.");
   return false;
 }
 
