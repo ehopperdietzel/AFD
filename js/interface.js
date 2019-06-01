@@ -110,6 +110,10 @@ var options =
       face: 'verdana',
       align: 'center'
     }
+  },
+  physics: 
+  {
+    enabled: false
   }
 };
 
