@@ -120,7 +120,7 @@ function testAFD()
     // Almacena la palabra
     var word = words[i];
 
-    // Para indicar si la palabra se acepto
+    // Para indicar si la palabra se aceptó
     var accepted = true;
 
     // Almacena el estado actual
